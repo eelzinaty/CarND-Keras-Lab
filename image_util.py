@@ -18,7 +18,7 @@ def rotateImage(image):
     dst = cv2.warpAffine(image,M,(cols,rows))
     return dst
 
-def generateAugmentedImages(X_data,y_data):
+def generateAugmentedImages(X_data,y_data,n_classes):
     num_images = 5 * len(X_data)
     x_aug = np.zeros(shape=(num_images,32,32,3)).astype(np.uint8)
     y_aug = np.zeros(shape=(num_images,n_classes))
